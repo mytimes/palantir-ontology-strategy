@@ -5,7 +5,7 @@
 动作指标显示动作类型在过去 30 天内近实时的使用情况。你可以从 [Ontology Manager](https://www.palantir.com/docs/foundry/ontology-manager/overview/) 中动作类型的概览页面访问这些指标，或者在 [Workflow Lineage](https://www.palantir.com/docs/foundry/workflow-lineage/overview/) 中选择某次执行的动作节点来访问。可用指标如下：
 
 - **成功/失败指标：**通过成功和失败计数监控动作的当前状态。这有助于快速识别问题并支持主动排查，使你能够在失败发生时立即处理。
-- **P95 持续时间指标：**跟踪每个动作类型执行时长的第 95 百分位（P95）。该指标突显执行时间的上限区间，帮助你发现性能瓶颈并优化工作流，以实现稳定、高效的运行。
+- **P95 持续时间指标：**跟踪每个动作类型执行时长的第 95 百分位（P95）。该指标突显执行时间的较高区间，帮助你发现性能瓶颈并优化工作流，以实现稳定、高效的运行。
 
 你还可以访问[运行历史](https://www.palantir.com/docs/foundry/aip-observability/run-history/)，它提供某个动作在过去七天内执行情况的完整视图。详细了解[本体与 AIP 可观测性能力](https://www.palantir.com/docs/foundry/aip-observability/overview/)。
 

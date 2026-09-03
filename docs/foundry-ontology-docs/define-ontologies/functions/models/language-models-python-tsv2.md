@@ -12,15 +12,15 @@ Palantir 提供了一组可在函数中使用的语言模型。[详细了解 Pal
 
 要开始使用语言模型，你必须按照以下步骤将特定模型导入你的函数代码仓库：
 
-1. 打开 **Resource imports** 面板中的 **Platform SDK** 选项卡。
+1. 打开 **资源导入（Resource imports）** 面板中的 **Platform SDK** 选项卡。
 
 ![TypeScript v2 代码仓库中访问 Platform SDK 资源的选项卡。](https://www.palantir.com/docs/resources/foundry/functions/platform-sdk-tab.png)
 
-2. 要导入新的语言模型，请在右上角选择 **Add > Models**。将打开一个窗口，你可以在其中查看可用的模型，包括 Palantir 提供的模型和已注册模型。
+2. 要导入新的语言模型，请在右上角选择 **添加（Add）> 模型（Models）**。将打开一个窗口，你可以在其中查看可用的模型，包括 Palantir 提供的模型和已注册模型。
 
 ![TypeScript v2 代码仓库中的模型导入对话框。](https://www.palantir.com/docs/resources/foundry/functions/models-v3-import-dialog.png)
 
-3. 选择要导入的模型，然后选择 **Confirm selection**。将打开一个配置对话框，你可以在其中为每个所选模型配置别名。选择别名旁边的笔形图标进行编辑，或选择保留默认值。
+3. 选择要导入的模型，然后选择 **确认选择（Confirm selection）**。将打开一个配置对话框，你可以在其中为每个所选模型配置别名。选择别名旁边的笔形图标进行编辑，或选择保留默认值。
 
 > **⚠️ 注意**
 >
@@ -28,7 +28,7 @@ Palantir 提供了一组可在函数中使用的语言模型。[详细了解 Pal
 
 ![选择要导入的模型后配置模型别名。](https://www.palantir.com/docs/resources/foundry/functions/configure-models-aliases.png)
 
-4. 导入的模型将显示在 **Resource imports** 侧边面板的 **Platform SDK** 选项卡中。你可以选择别名旁边的笔形图标，内联编辑任何别名。
+4. 导入的模型将显示在 **资源导入（Resource imports）** 侧边面板的 **Platform SDK** 选项卡中。你可以选择别名旁边的笔形图标，内联编辑任何别名。
 
 ![内联配置模型别名。](https://www.palantir.com/docs/resources/foundry/functions/inline-models-aliases-edit.png)
 
@@ -42,7 +42,7 @@ TypeScript v2 和 Python 函数中的语言模型使用代理端点与模型交�
 
 > **ℹ️ 提示**
 >
-> 第三方库（如下例中的 `openai`）未预装。请从左侧边栏的 **Libraries** 部分安装它们。
+> 第三方库（如下例中的 `openai`）未预装。请从左侧边栏的 **库（Libraries）** 部分安装它们。
 
 要在函数中使用已导入的语言模型，首先导入必要的工具：
 

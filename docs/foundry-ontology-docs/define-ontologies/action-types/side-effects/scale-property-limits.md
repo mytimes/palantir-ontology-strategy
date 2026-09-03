@@ -2,7 +2,7 @@
 
 > 本文为 [Palantir 官方文档](https://www.palantir.com/docs/foundry/action-types/scale-property-limits/)的非官方中文翻译，仅供学习参考。原文 © 2026 Palantir Technologies Inc. 保留所有权利。
 
-为确保被编辑的对象类型能够快速处理编辑并更新面向用户的数据、而不拖慢线上应用，平台设有若干限制。提交的动作若超出这些限制将不会成功，并会向用户显示错误消息。
+为确保被编辑的对象类型能够快速处理编辑并更新面向用户的数据，而不拖慢线上应用，平台设有若干限制。提交的动作若超出这些限制将不会成功，并会向用户显示错误消息。
 
 ## 配置限制
 
@@ -51,7 +51,7 @@
 | 地理时间序列引用 | 地理时间序列引用 | 是（仅 OSv2） |
 | 整数 | 整数 | 是 |
 | Long | Long | 是 |
-| 强制控制 | - | 不作为属性受支持，动作中也不支持 |
+| 强制控制 | - | 不支持用作属性，动作中也不支持 |
 | 媒体引用 | 媒体引用 | 是（仅 OSv2） |
 | 字符串 | 字符串 | 是 |
 | Short | 整数 | 是 |
@@ -83,8 +83,8 @@
 | Short | 整数 | 是 |
 | 结构体 | 结构体 | 是（仅 OSv2） |
 | 时间戳 | 时间戳 | 是 |
-| 时间序列引用 | - | 不作为属性受支持，动作中也不支持 |
-| 向量 | - | 不作为属性受支持，动作中也不支持 |
+| 时间序列引用 | - | 不支持用作属性，动作中也不支持 |
+| 向量 | - | 不支持用作属性，动作中也不支持 |
 
 ## 支持的属性
 
@@ -92,7 +92,7 @@
 
 ## 通知接收者
 
-使用[副作用通知](https://www.palantir.com/docs/foundry/action-types/notifications/)时，单个动作最多可通知 500 名接收者。当通知内容为“从函数”（From a function）渲染时，此限制降为 50 名接收者。有关生成通知时需要考虑的更多限制，请参阅[通知的最大接收者限制](https://www.palantir.com/docs/foundry/action-types/notifications/#maximum-recipient-limits)文档。
+使用[副作用通知](https://www.palantir.com/docs/foundry/action-types/notifications/)时，单个动作最多可通知 500 名接收者。当通知内容以“从函数”（From a function）方式渲染时，此限制降为 50 名接收者。有关生成通知时需要考虑的更多限制，请参阅[通知的最大接收者限制](https://www.palantir.com/docs/foundry/action-types/notifications/#maximum-recipient-limits)文档。
 
 ---
 

@@ -12,7 +12,7 @@
 
 ## 接口特性
 
-接口由接口属性、[链接类型约束](https://www.palantir.com/docs/foundry/interfaces/interface-link-types-overview/)、[动作类型约束](https://www.palantir.com/docs/foundry/interfaces/interface-action-type-constraints/)以及关于该接口的[元数据](https://www.palantir.com/docs/foundry/interfaces/interface-metadata/)组成。接口属性可以在接口上本地定义（推荐），也可以使用[共享属性](https://www.palantir.com/docs/foundry/object-link-types/shared-property-overview/)定义。一个接口可以由多个对象类型实现。
+接口由接口属性、[链接类型约束](https://www.palantir.com/docs/foundry/interfaces/interface-link-types-overview/)、[动作类型约束](https://www.palantir.com/docs/foundry/interfaces/interface-action-type-constraints/)以及该接口的[元数据](https://www.palantir.com/docs/foundry/interfaces/interface-metadata/)组成。接口属性可以在接口上本地定义（推荐），也可以使用[共享属性](https://www.palantir.com/docs/foundry/object-link-types/shared-property-overview/)定义。一个接口可以由多个对象类型实现。
 
 与编程语言中的接口非常相似，你可以[扩展接口](https://www.palantir.com/docs/foundry/interfaces/extend-interface/)来创建一个继承原接口属性的子接口，然后向子接口添加新的、更具体的属性。随后，对象类型可以[实现该接口](https://www.palantir.com/docs/foundry/interfaces/implement-interface/)，以表明它们符合接口定义。对象类型可以实现多个接口，以便在不同的工作流中使用。接口也可以扩展多个其他接口，包括那些自身又扩展了其他接口的接口，从而产生通过多层接口继承而来的属性。
 

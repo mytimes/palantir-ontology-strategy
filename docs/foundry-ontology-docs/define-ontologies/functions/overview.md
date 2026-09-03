@@ -4,7 +4,7 @@
 
 **函数**使代码编写者能够编写可在运营场景中快速执行的逻辑，例如用于支持决策流程的仪表板和应用。该逻辑在隔离环境中的服务器端执行。
 
-值得注意的是，函数对基于本体编写逻辑提供了一等支持。这包括支持读取各种对象类型的属性、遍历链接，以及灵活地进行本体编辑。
+值得注意的是，函数对基于本体编写逻辑提供了一等公民级的支持。这包括支持读取各种对象类型的属性、遍历链接，以及灵活地进行本体编辑。
 
 函数的常见用例包括：
 
@@ -15,7 +15,7 @@
 - 在后端运行逻辑，返回要在 [Slate](https://www.palantir.com/docs/foundry/slate/overview/) 前端显示的信息。
 - 计算自定义指标或聚合，以在 [Quiver](https://www.palantir.com/docs/foundry/quiver/overview/) 中显示。
 - 通过[外部函数](https://www.palantir.com/docs/foundry/functions/webhooks/)查询外部系统以丰富本体中的对象。
-- 以增量方式流式返回结果以打造实时体验，尤其是在使用[语言模型](https://www.palantir.com/docs/foundry/functions/streaming-functions/)时。
+- 以增量方式流式返回结果，从而打造实时体验，尤其是在使用[语言模型](https://www.palantir.com/docs/foundry/functions/streaming-functions/)时。
 - 在 [Pipeline Builder](https://www.palantir.com/docs/foundry/functions/python-functions-builder/) 中将 Python 函数用作 sidecar 容器。
 
 函数支持的语言是 [TypeScript ↗](https://www.typescriptlang.org/docs/handbook/basic-types.html) 和 [Python ↗](https://www.python.org/)。

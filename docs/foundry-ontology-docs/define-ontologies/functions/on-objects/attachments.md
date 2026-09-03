@@ -139,7 +139,7 @@ def process_excel_upload(excel_file: Attachment) -> list[OntologyEdit]:
 
 ### TypeScript v1 中的文件解析
 
-TypeScript v1 函数不提供文件系统支持。解析文件数据的相关依赖通常会依赖 `fs` 模块，而该模块在函数环境中不可用。这一限制可能导致编译和执行期间出现 `fs` 模块错误。要绕过此限制，你可以引入对内存文件系统（例如 `memfs`）的依赖，然后将该依赖以 `fs` 名称设置别名。
+TypeScript v1 函数不提供文件系统支持。解析文件数据的相关依赖通常会用到 `fs` 模块，而该模块在函数环境中不可用。这一限制可能导致编译和执行期间出现 `fs` 模块错误。要绕过此限制，你可以引入对内存文件系统（例如 `memfs`）的依赖，然后将该依赖以 `fs` 名称设置别名。
 
 下面是在 `package.json` 文件中使用 NPM 依赖 `memfs` 的示例：
 

@@ -19,7 +19,7 @@
 
 Foundry 本体并非抽象的数据模型，而是将每个本体概念映射到组织的实际数据，使这一数据资产能够驱动真实世界的应用。随着用户的决策和洞察以本体编辑的形式记录下来，这一数据资产的丰富度和价值也不断增长。
 
-当用户执行动作时，对对象、属性值和链接所做的任何更改都将提交到本体，并反映在所有用户应用中。同样，相同的动作逻辑和验证可以在所有面向用户的应用中使用，确保对本体的编辑保持一致。纳入用户编辑后的最新版本对象数据将保存在对象类型的回写数据集中。
+当用户执行动作时，对对象、属性值和链接所做的任何更改都将提交到本体，并反映在所有用户应用中。同样，相同的动作逻辑和验证可以在所有面向用户的应用中使用，确保对本体的编辑保持一致。包含用户编辑的对象数据最新版本将保存在对象类型的回写数据集中。
 
 请通过学习如何[创建动作类型](https://www.palantir.com/docs/foundry/action-types/getting-started/)和[探索其他动作类型](https://www.palantir.com/docs/foundry/action-types/explore-action-types/)开始，或了解[规则](https://www.palantir.com/docs/foundry/action-types/rules/)、[参数](https://www.palantir.com/docs/foundry/action-types/parameter-overview/)和[提交条件](https://www.palantir.com/docs/foundry/action-types/submission-criteria/)。
 

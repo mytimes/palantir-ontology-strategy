@@ -20,7 +20,7 @@ Palantir 提供了一组可在函数内使用的语言模型。[阅读更多关�
 
 ![模型导入侧边栏。](https://www.palantir.com/docs/resources/foundry/functions/v3-lms-functions-import-sidebar.png?width=400)
 
-1. 要导入新的语言模型，请在**资源导入（Resource Imports）**面板的右上角选择**添加（Add）**，然后选择**模型（Models）**。这将打开一个新窗口，你可以在其中看到对你可用的 Palantir 提供的模型。
+1. 要导入新的语言模型，请在**资源导入（Resource Imports）**面板的右上角选择**添加（Add）**，然后选择**模型（Models）**。这将打开一个新窗口，你可以在其中看到 Palantir 提供、可供你使用的模型。
 
 ![模型导入对话框，显示几个 Palantir 提供的 LLM。](https://www.palantir.com/docs/resources/foundry/functions/v3-lms-functions-import-dialog.png?width=600)
 
@@ -41,7 +41,7 @@ import { Function, Uses } from "@foundry/functions-api";
 import { Gpt41 } from "@foundry/languagemodelservice/models";
 ```
 
-每个语言模型都会生成一批带有强类型输入和输出的可用方法。例如，GPT-4.1 模型提供 `createChatCompletion`、`createChatVisionCompletion` 和 `createChatCompletionStreamed` 作为与模型交互的不同 API。能力列表可能会在导入模型的后续版本中扩展。
+每个语言模型都提供一批自动生成的方法，具有强类型的输入和输出。例如，GPT-4.1 模型提供 `createChatCompletion`、`createChatVisionCompletion` 和 `createChatCompletionStreamed` 作为与模型交互的不同 API。能力列表可能会在导入模型的后续版本中扩展。
 
 Foundry 必须知道你从已发布函数中调用了哪些模型方法。静态分析会自动检测大多数调用；静态分析遗漏的调用会导致运行时错误，提示你添加 `@Uses` 装饰器，该装饰器会补充自动检测到的使用情况。在装饰器的 `queries` 键下声明模型方法，如下方及模型详情面板中的代码片段所示。
 
@@ -138,7 +138,7 @@ public async llmFunction_embeddings(inputs: string[]): Promise<Double[][]> {
 
 函数中更新后的语言模型提供更高级的能力，例如对视觉和流式的更好支持。我们强烈建议升级你的代码仓库，以利用最新的 AIP 功能。
 
-1. 如果你已导入现有的[旧版语言模型](https://www.palantir.com/docs/foundry/functions/language-models-legacy/)，侧边栏中会出现一个用于升级的警告图标。点击 **Select imports（选择导入）**以打开模型导入对话框。
+1. 如果你已导入现有的[旧版语言模型](https://www.palantir.com/docs/foundry/functions/language-models-legacy/)，侧边栏中会出现一个用于升级的警告图标。点击**选择导入（Select imports）**以打开模型导入对话框。
 
 ![侧边栏中的模型导入警告。](https://www.palantir.com/docs/resources/foundry/functions/v3-lms-functions-migration-sidebar.png?width=400)
 

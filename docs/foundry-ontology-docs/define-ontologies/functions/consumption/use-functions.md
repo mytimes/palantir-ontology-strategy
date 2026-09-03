@@ -56,7 +56,7 @@ Workshop 的**图表：XY** 组件支持使用函数支撑的聚合按需派生�
 
 ### 副作用：Webhook
 
-动作还可以配置为在应用时触发 Webhook。Webhook 使 Foundry 能够与其他系统集成，使用户应用的动作能够回写到 Foundry 之外的 API。你可以使用函数来计算要发送给 Webhook 的参数，Webhook 会在执行时使用这些参数，从而实现诸如基于对象数据填充 Webhook 参数之类的工作流。[查看关于 Webhook 的完整文档。](https://www.palantir.com/docs/foundry/action-types/webhooks/)
+动作还可以配置为在应用时触发 Webhook。Webhook 使 Foundry 能够与其他系统集成，使用户应用的动作能够回写到 Foundry 之外的 API。你可以使用函数来计算应发送给将要执行的 Webhook 的参数，从而实现诸如基于对象数据填充 Webhook 参数之类的工作流。[查看关于 Webhook 的完整文档。](https://www.palantir.com/docs/foundry/action-types/webhooks/)
 
 ## Slate
 

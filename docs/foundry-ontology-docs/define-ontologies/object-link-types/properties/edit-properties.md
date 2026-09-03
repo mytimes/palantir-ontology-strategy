@@ -6,7 +6,7 @@
 
 在属性编辑器的属性窗格中，将鼠标悬停在要删除的属性上，然后选择 **Delete property**（删除属性）。
 
-- 请注意，属性删除仅在你保存更改后生效，并且会中断引用该属性的任何视图或应用。
+- 请注意，属性删除仅在你保存更改后生效，并且会使引用该属性的任何视图或应用失效。
 - 状态为 `active` 的属性**无法**删除。
   - 详细了解[状态](https://www.palantir.com/docs/foundry/object-link-types/metadata-statuses/)。
 

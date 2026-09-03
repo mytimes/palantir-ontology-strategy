@@ -2,7 +2,7 @@
 
 > 本文为 [Palantir 官方文档](https://www.palantir.com/docs/foundry/action-types/permissions/)的非官方中文翻译，仅供学习参考。原文 © 2026 Palantir Technologies Inc. 保留所有权利。
 
-权限以以下方式应用于动作类型：
+权限以下列方式应用于动作类型：
 
 - 谁可以查看给定的动作类型？
 - 谁可以编辑给定的动作类型？
@@ -10,7 +10,7 @@
 
 ## 应用动作
 
-应用动作类型的能力取决于其所编辑的对象类型和链接类型的配置。在所有情况下，提交动作的用户必须能够查看被编辑的对象类型和链接类型及其数据源，并通过[提交条件](https://www.palantir.com/docs/foundry/action-types/submission-criteria/)。如果对象类型仅允许通过动作进行编辑，则用户可以对其能够查看的所有对象进行编辑。对于允许通过动作之外的方式进行编辑的对象类型和链接类型，如果该对象类型或链接类型由数据集支撑，则用户还需要对回写数据集（writeback dataset）拥有编辑权限。如果对象类型或链接类型由[受限视图](https://www.palantir.com/docs/foundry/security/restricted-views/)支撑，则用户需要通过编辑策略。
+应用动作类型的能力取决于其所编辑的对象类型和链接类型的配置。在所有情况下，提交动作的用户必须能够查看被编辑的对象类型和链接类型及其数据源，并通过[提交条件](https://www.palantir.com/docs/foundry/action-types/submission-criteria/)。如果对象类型仅允许通过动作进行编辑，则用户可以对其能够查看的所有对象进行编辑。对于允许通过动作之外的方式进行编辑的对象类型和链接类型，如果该对象类型或链接类型由数据集支撑，则用户还需要对回写数据集（writeback dataset）拥有编辑权限。如果对象类型或链接类型由[受限视图](https://www.palantir.com/docs/foundry/security/restricted-views/)支撑，则用户需要满足编辑策略。
 
 > **ℹ️ 提示**
 >
@@ -22,7 +22,7 @@
 
 ### 提交条件
 
-动作提交条件可以对谁能运行动作进行细粒度控制。简单的提交条件可以要求特定的用户 ID 或用户组 ID，并且可以与参数中的信息组合使用。更多信息请参见[提交条件文档](https://www.palantir.com/docs/foundry/action-types/submission-criteria/)。
+动作提交条件可以细粒度地控制谁可以运行动作。简单的提交条件可以要求特定的用户 ID 或用户组 ID，并且可以与参数中的信息组合使用。更多信息请参见[提交条件文档](https://www.palantir.com/docs/foundry/action-types/submission-criteria/)。
 
 ### 读和写授权
 
@@ -57,7 +57,7 @@
 接收人必须有权访问通知中包含的任何对象数据。
 
 - 如果用户无权访问通知内容中包含的所有数据，则不会向其发送通知。
-- 如果有多个接收人，其中一些人缺少通知所含数据的正确权限，则只有权限充分的用户会收到通知。
+- 如果有多个接收人，其中一些人缺少通知所含数据的正确权限，则只有具有足够权限的用户会收到通知。
 - 如果通知因任何原因发送失败，编辑仍可能成功。
 
 执行动作的用户必须能够查看将接收通知的用户和/或用户组。

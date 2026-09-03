@@ -84,7 +84,7 @@ TypeScript v2 函数可以使用 NPM 生态系统中任何可用的日期和时�
 
 ## 生成 Ontology SDK
 
-TypeScript v2 函数通过 [Ontology SDK](https://www.palantir.com/docs/foundry/ontology-sdk/typescript-osdk/) 为查询和编辑本体提供了一等支持。与 TypeScript v1 一样，TypeScript v2 仓库允许你通过[**资源导入**侧边栏](https://www.palantir.com/docs/foundry/functions/resource-imports-sidebar/)导入本体实体。添加对象类型和链接类型后，系统会提示你创建 Ontology SDK 的初始版本。
+TypeScript v2 函数通过 [Ontology SDK](https://www.palantir.com/docs/foundry/ontology-sdk/typescript-osdk/) 为查询和编辑本体提供了一等公民级的支持。与 TypeScript v1 一样，TypeScript v2 仓库允许你通过[**资源导入**侧边栏](https://www.palantir.com/docs/foundry/functions/resource-imports-sidebar/)导入本体实体。添加对象类型和链接类型后，系统会提示你创建 Ontology SDK 的初始版本。
 
 ![在 TypeScript 代码仓库中创建你的第一个 Ontology SDK 的提示。](https://www.palantir.com/docs/resources/foundry/functions/osdk-create-initial-version.png)
 
@@ -154,7 +154,7 @@ export class MyOntologyEditFunctions {
 }
 ```
 
-在 TypeScript v2 中，你必须从 `@osdk/functions` 包导入 `createEditBatch` 函数，以构建一个在整个执行期间使用的编辑存储。你必须使用 `Edits` 类型来声明允许你的函数编辑哪些实体。这会在编译时强制执行类型安全；如果你尝试编辑的对象或链接的类型不在你的 `Edits` 类型覆盖范围内，TypeScript 编译器将返回错误。
+在 TypeScript v2 中，你必须从 `@osdk/functions` 包导入 `createEditBatch` 函数，以构建一个在整个执行期间使用的编辑批次。你必须使用 `Edits` 类型来声明允许你的函数编辑哪些实体。这会在编译时强制执行类型安全；如果你尝试编辑的对象或链接的类型不在你的 `Edits` 类型覆盖范围内，TypeScript 编译器将返回错误。
 
 ```typescript
 import { createEditBatch, Edits } from "@osdk/functions";

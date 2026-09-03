@@ -12,7 +12,7 @@
 
 > **ℹ️ 提示**
 >
-> 标准本体编辑使用编辑批处理。TypeScript v2 还支持[暂存写入](https://www.palantir.com/docs/foundry/functions/typescript-v2-staged-writes/)，它在函数内提供写后读保证。使用暂存写入时，编辑对同一执行中后续的查询立即可见，并且嵌套的暂存写入函数调用会共享这些编辑。当函数必须读取它刚刚写入的数据时，请使用暂存写入。
+> 标准本体编辑使用编辑批次。TypeScript v2 还支持[暂存写入](https://www.palantir.com/docs/foundry/functions/typescript-v2-staged-writes/)，它在函数内提供写后读保证。使用暂存写入时，编辑对同一执行中后续的查询立即可见，并且嵌套的暂存写入函数调用会共享这些编辑。当函数必须读取它刚刚写入的数据时，请使用暂存写入。
 
 > **⚠️ 注意：警告**
 >
@@ -29,7 +29,7 @@ import { Edits } from "@osdk/functions";
 type OntologyEdit = Edits.Object<Employee> | Edits.Interface<Person> | Edits.Object<Ticket> | Edits.Link<Employee, "assignedTickets">;
 ```
 
-然后，你必须声明该函数返回一个新类型的编辑数组。
+然后，你必须声明该函数返回由该新类型编辑组成的数组。
 
 ```typescript
 export default function createNewTicketAndAssignToEmployee(): OntologyEdit[] {
@@ -37,9 +37,9 @@ export default function createNewTicketAndAssignToEmployee(): OntologyEdit[] {
 }
 ```
 
-## 构建本体编辑批处理
+## 构建本体编辑批次
 
-要在 TypeScript v2 函数中执行本体编辑，首先使用从 `@osdk/functions` 导出的 `createEditBatch` 函数构建一个本体编辑批处理，并将先前声明的类型作为类型参数传入：
+要在 TypeScript v2 函数中执行本体编辑，首先使用从 `@osdk/functions` 导出的 `createEditBatch` 函数构建一个本体编辑批次，并将先前声明的类型作为类型参数传入：
 
 ```typescript
 import { Employee, Ticket } from "@ontology/sdk";
@@ -55,13 +55,13 @@ export default function createNewTicketAndAssignToEmployee(client: Client): Onto
 }
 ```
 
-此批处理用于跟踪函数中所做的所有编辑。
+此批次用于跟踪函数中所做的所有编辑。
 
 ## 更新属性
 
 ### 对象属性
 
-使用在创建的批处理上可用的 `update` 方法来修改一个或多个对象属性：
+使用在创建的批次上可用的 `update` 方法来修改一个或多个对象属性：
 
 ```typescript
 batch.update(employee, { lastName: newName });
@@ -73,7 +73,7 @@ batch.update(employee, { lastName: newName });
 batch.update({ $apiName: "Employee", $primaryKey: 23 }, { lastName: newName });
 ```
 
-在同一函数执行的后续过程中，对 `employee` 的 `lastName` 属性值的访问*不会*反映你在编辑批处理上调用 `update` 时所做的更改。
+在同一函数执行的后续过程中，对 `employee` 的 `lastName` 属性值的访问*不会*反映你在编辑批次上调用 `update` 时所做的更改。
 
 有时，将一个对象类型实例的所有属性值复制到另一个实例会很有用。以下示例将 `employee2` 的属性值赋给 `employee1`：
 
@@ -97,7 +97,7 @@ batch.update(person, { firstName: newFirstName });
 
 ## 更新链接
 
-对于多对多链接，在创建的批处理上提供了 `link` 和 `unlink` 方法，用于添加或移除对象之间的链接。
+对于多对多链接，在创建的批次上提供了 `link` 和 `unlink` 方法，用于添加或移除对象之间的链接。
 
 ```typescript
 // Assign an employee to an office.
@@ -107,7 +107,7 @@ batch.link(employee, "office", office);
 batch.unlink(employee, "office", office);
 ```
 
-对于一对一和一对多链接，使用在创建的批处理上可用的 `update` 方法来修改源对象的外键属性。下面的示例说明了一对多链接。一名员工可以有多个工单，但每个工单只能有一名员工。
+对于一对一和一对多链接，使用在创建的批次上可用的 `update` 方法来修改源对象的外键属性。下面的示例说明了一对多链接。一名员工可以有多个工单，但每个工单只能有一名员工。
 
 ```typescript
 // Assign a ticket to an employee.
@@ -131,7 +131,7 @@ batch.unlink({ $apiName: "Employee", $primaryKey: 23 }, "assignedTickets", { $ap
 
 ### 对象
 
-你可以使用编辑批处理上的 `create` 方法创建新对象。创建新对象时，你必须为其主键指定一个值，并可以选择初始化任何其他属性。
+你可以使用编辑批次上的 `create` 方法创建新对象。创建新对象时，你必须为其主键指定一个值，并可以选择初始化任何其他属性。
 
 在此示例中，我们创建一个具有给定 ID 的新 `Ticket` 对象，设置其 `dueDate` 属性，并通过修改 `assignedTickets` 链接将其分配给给定的 `Employee`。为了简化 `dueDate` 新值的计算，我们使用 `luxon` 库。
 
@@ -165,7 +165,7 @@ export default function createNewTicketAndAssignToEmployee(
 
 ### 接口
 
-你可以通过调用 `create` 方法并指定一个接口、底层对象类型以及一组接口属性，来通过接口创建新的对象实例。所提供的接口属性中必须有一个由底层对象类型的主键属性实现。
+要通过接口创建新的对象实例，可以调用 `create` 方法并指定一个接口、底层对象类型以及一组接口属性。所提供的接口属性中必须有一个由底层对象类型的主键属性实现。
 
 ```typescript
 editBatch.create(Person, {
@@ -179,7 +179,7 @@ editBatch.create(Person, {
 
 ### 对象
 
-你可以通过在编辑批处理上调用 `delete` 方法来删除对象。
+你可以通过在编辑批次上调用 `delete` 方法来删除对象。
 
 在此示例中，我们删除分配给给定员工的所有工单：
 

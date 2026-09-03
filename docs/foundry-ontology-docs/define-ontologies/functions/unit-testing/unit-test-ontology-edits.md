@@ -18,7 +18,7 @@
 
 四个链接方法还接受一个回调，该回调会收到目前已收集到的编辑；当要链接的对象是由被测函数创建时，这很有用。在这种情况下，`.addsLink` 和 `.removesLink` 的回调返回单个链接，而 `.addsLinks` 和 `.removesLinks` 的回调返回数组。示例请参阅[验证对新建对象的编辑](#验证对新建对象的编辑)。
 
-`.hasNoMoreEdits()` 没有复数形式，并且由于它不返回结果，它必须位于验证链的最后。
+`.hasNoMoreEdits()` 没有复数形式，并且由于不返回结果，它必须位于验证链的最后。
 
 #### 验证对象创建
 
@@ -184,7 +184,7 @@ describe("example test suite", () => {
 });
 ```
 
-使用 `.hasNoMoreEdits()` 时，你可以忽略所发生的特定种类的编辑。方法是传入一个包含以下部分或全部项的对象：
+使用 `.hasNoMoreEdits()` 时，你可以忽略所发生的特定种类的编辑。方法是传入一个对象，其中包含以下各项中的部分或全部：
 
 - `ignoreExtraCreatedObjects: true`
 - `ignoreExtraModifiedObjects: true`

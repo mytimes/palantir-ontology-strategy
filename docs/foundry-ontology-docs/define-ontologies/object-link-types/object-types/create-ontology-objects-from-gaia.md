@@ -46,7 +46,7 @@
 
 ### 来自 Gaia App Store 的 Gaia Geoshape Creatable 接口
 
-在 Foundry 中，[接口](https://www.palantir.com/docs/foundry/interfaces/interface-overview/)存在于你的本体中，用于描述对象类型的形状及其能力，从而在具有共同形状的对象类型之间实现一致的建模和交互。你可以在多个对象类型上实现同一个接口，并且接口可以扩展任意数量的其他接口。Gaia Geoshape Creatable 接口一旦在对象类型上实现，就能让你从在 Gaia 地图上绘制的形状在本体中创建对象。
+在 Foundry 中，[接口](https://www.palantir.com/docs/foundry/interfaces/interface-overview/)存在于你的本体中，用于描述对象类型的形状及其能力，从而在具有共同形状的对象类型之间实现一致的建模和交互。你可以在多个对象类型上实现同一个接口，并且接口可以扩展任意数量的其他接口。Gaia Geoshape Creatable 接口一旦在对象类型上实现，就能让你在本体中从 Gaia 地图上绘制的形状创建对象。
 
 > **⚠️ 注意**
 >
@@ -109,7 +109,7 @@
 >
 > 你可以在 Foundry 的[安全](https://www.palantir.com/docs/foundry/security/restricted-views/#create-restricted-views)和[对象权限](https://www.palantir.com/docs/foundry/object-permissioning/configuring-rv-access-controls/)文档中查阅更多受限视图创建说明。
 
-你的受限视图应当包含一个[细粒度策略](https://www.palantir.com/docs/foundry/security/restricted-views/#compose-a-granular-policy)，根据用户的[密级访问权限](https://www.palantir.com/docs/foundry/security/classification-based-access-controls/)限制其对视图中数据的访问。在 **Create '{restricted view}'** 窗口中将编写细粒度策略作为第一步。
+你的受限视图应当包含一个[细粒度策略](https://www.palantir.com/docs/foundry/security/restricted-views/#compose-a-granular-policy)，根据用户的[密级访问权限](https://www.palantir.com/docs/foundry/security/classification-based-access-controls/)限制其对视图中数据的访问。编写细粒度策略应是 **Create '{restricted view}'** 窗口中的第一步。
 
 ![显示一个受限视图策略示例。](https://www.palantir.com/docs/resources/foundry/object-link-types/create-restricted-view.png)
 
@@ -308,12 +308,12 @@
 
 ## 注册你的本体及其类型
 
-现在，你已经有了实现 Gaia Geoshape Creatable、Gaia Geopoint Creatable 和 MILSTD 2525C Symbol 接口的对象类型，并且附带了相应的动作类型，使用户能够配置他们根据在 Gaia 地图上绘制的形状、放置的点和配置的战术图形所创建的对象。接下来，你将根据你的注册实例，在 Gaia 的管理应用或 [Control Panel](https://www.palantir.com/docs/foundry/administration/control-panel/) 扩展中注册你的本体、对象类型和动作类型。
+现在，你已经有了实现 Gaia Geoshape Creatable、Gaia Geopoint Creatable 和 MILSTD 2525C Symbol 接口的对象类型，并且附带了相应的动作类型，使用户能够配置他们从 Gaia 地图上绘制的形状、放置的点和配置的战术图形创建的对象。接下来，你将根据你的注册实例，在 Gaia 的管理应用或 [Control Panel](https://www.palantir.com/docs/foundry/administration/control-panel/) 扩展中注册你的本体、对象类型和动作类型。
 
 > **ℹ️ 提示**
 >
 > 要访问 Gaia 的管理应用，你必须是平台管理员。要访问 Gaia 的 Control Panel 扩展，你必须被授予 **Organization administrator**（组织管理员）角色。
-> 如果你无法访问管理应用或 Control Panel 扩展，或有访问相关问题，请联系 Palantir 支持。
+> 如果你无法访问管理应用或 Control Panel 扩展，请联系 Palantir 支持。
 
 要注册你的本体、对象类型和动作类型，请启动 Gaia 的管理应用或 Control Panel 扩展，并按照以下步骤操作：
 
@@ -428,7 +428,7 @@ Gaia 提供两个不同的入口点，可用于在地图上创建对象；它们
 
 ### 将标注提升为对象
 
-在 Gaia 中，*标注（annotation）*是当前地图本地的形状、点或符号。你可以将地图上的标注提升为本体中的对象，以便在其他用户创建的其他地图上使用——这些用户需有权访问相应的对象类型。
+在 Gaia 中，*标注（annotation）*是仅存在于你当前地图的形状、点或符号。你可以将地图上的标注提升为本体中的对象，以便在其他用户创建的其他地图上使用——这些用户需有权访问相应的对象类型。
 
 要将现有标注标记为对象，请双击地图上的标注，或将光标悬停在左侧面板 **Layers** 选项卡中标注的铅笔图标上，以启动形状、点或符号编辑窗口。接下来，选择 **Promote to object**（提升为对象），从 **Object type** 下拉菜单中选择你的对象类型，并在形状、点或符号编辑窗口中填写动作表单。
 

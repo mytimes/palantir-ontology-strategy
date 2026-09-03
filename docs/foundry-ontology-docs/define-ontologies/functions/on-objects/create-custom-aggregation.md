@@ -21,7 +21,7 @@ const result = await Objects.search()
     .sum(expense => expense.amount);
 ```
 
-## 操作聚合结果
+## 处理聚合结果
 
 接下来，你可以推算各部门未来六个月的支出。在本例中，你可以采用一种简单的方法：使用最后一个月的值作为未来六个月的估算值。
 

@@ -16,7 +16,7 @@ Foundry 平台每小时记录一次每个对象的本体用量测量值。随时
 
 ## 调查本体用量
 
-对象在 Ontology Manager 中管理，它是所有对象管理和监控的中心。Ontology Manager 允许用户配置哪些数据集应成为对象、这些对象上附加哪些类型的属性，以及在对象类型之间定义了哪些链接集。
+对象在 Ontology Manager 中管理，它是所有对象管理和监控的中心。Ontology Manager 允许用户配置哪些数据集应成为对象、这些对象上附加哪些类型的属性，以及在对象类型之间定义哪些链接集。
 
 对象及其对应链接类型的本体总用量列在资源管理应用（Resource Management Application）中。
 

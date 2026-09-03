@@ -59,7 +59,7 @@
   - `Do not map property to Gotham`（不将属性映射到 Gotham）是默认选项——未映射的 Foundry 属性不会传播到 Gotham 本体中。
   - `Assign to shared property`（分配给共享属性）使你能够选择一个*现有*共享属性进行映射。
   - `Promote to shared property`（提升为共享属性）会创建一个*新*共享属性，供其他对象使用。
-  - `Create a local clone of the property in Gotham`（在 Gotham 中创建属性的本地克隆）会在 Gotham 中创建所选属性的副本，该副本与其应用兼容。
+  - `Create a local clone of the property in Gotham`（在 Gotham 中创建属性的本地克隆）会在 Gotham 中创建所选属性的副本，该副本与 Gotham 的应用兼容。
 
 > **ℹ️ 提示**
 >

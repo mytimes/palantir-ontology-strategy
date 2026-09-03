@@ -43,7 +43,7 @@
 **Details（详情）** 标签页说明动作的评估方式，以及除直接编辑之外还会发生什么：
 
 - **执行日志（Execution log）：**运行的逐步明细，涵盖元数据加载、依赖校验、提交条件、参数校验和编辑计算。使用此日志可以了解动作为什么成功或在哪里失败。
-- **副作用（Side effects）：**动作将触发的[副作用](https://www.palantir.com/docs/foundry/action-types/side-effects-overview/)的预览，例如[通知](https://www.palantir.com/docs/foundry/action-types/notifications/)。你可以打开通知预览，查看将生成的内容和接收人。
+- **副作用（Side effects）：**动作将触发的[副作用](https://www.palantir.com/docs/foundry/action-types/side-effects-overview/)的预览，例如[通知](https://www.palantir.com/docs/foundry/action-types/notifications/)。你可以打开通知预览，查看将生成的内容和收件人。
 - **引用的实体（Referred entities）：**动作在运行期间引用的对象类型、链接类型、接口类型和[函数](https://www.palantir.com/docs/foundry/action-types/function-actions-overview/)。
 
 如果动作失败，**Details（详情）** 标签页将错误分为两类：
@@ -63,7 +63,7 @@
 
 ## 外部调用
 
-为了产生准确的结果，测试运行会执行动作达成其结果所需的函数和调用。这包括动作[规则](https://www.palantir.com/docs/foundry/action-types/rules/)中使用的函数、生成通知正文或接收人的函数、生成 Webhook 负载的函数、[回写 Webhook](https://www.palantir.com/docs/foundry/action-types/webhooks/#writeback-webhooks)，以及访问外部资源的函数。仅会进行确定动作结果所需的调用。
+为了产生准确的结果，测试运行会执行动作达成其结果所需的函数和调用。这包括动作[规则](https://www.palantir.com/docs/foundry/action-types/rules/)中使用的函数、生成通知正文或收件人的函数、生成 Webhook 负载的函数、[回写 Webhook](https://www.palantir.com/docs/foundry/action-types/webhooks/#writeback-webhooks)，以及访问外部资源的函数。仅会进行确定动作结果所需的调用。
 
 > **⚠️ 注意**
 >

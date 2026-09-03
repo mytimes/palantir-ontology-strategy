@@ -69,14 +69,14 @@ def compute_stats(a: Double, b: Double) -> Stats:
   - **从图形视图：**
     1. 从管道图形的上部选择 **Reusables**（可复用项），然后选择 **User-defined functions**（用户定义函数）。![Pipeline Builder 中的 “Reusables” 按钮。](https://www.palantir.com/docs/resources/foundry/functions/python-functions-builder-reusable.png?width=500px)
     2. 选择 **Import UDF**（导入 UDF），在可用函数中搜索以找到你想使用的函数。
-  3. 在函数名称旁选择 **Add**（添加）。该函数随后应显示 **Imported**（已导入）标签。![向 Pipeline Builder 添加 Python 函数。](https://www.palantir.com/docs/resources/foundry/functions/python-functions-add-builder.png?width=700px)
-  4. 关闭导入对话框，并在 Pipeline Builder 图形上你想使用该函数的位置选择 **Transform**（转换）。
-  5. 从转换列表中，找到左侧的 **UDFs** 选项卡以查看你导入的函数。
+    3. 在函数名称旁选择 **Add**（添加）。该函数随后应显示 **Imported**（已导入）标签。![向 Pipeline Builder 添加 Python 函数。](https://www.palantir.com/docs/resources/foundry/functions/python-functions-add-builder.png?width=700px)
+    4. 关闭导入对话框，并在 Pipeline Builder 图形上你想使用该函数的位置选择 **Transform**（转换）。
+    5. 从转换列表中，找到左侧的 **UDFs** 选项卡以查看你导入的函数。
   - **使用转换选择器：**
     1. 在 Pipeline Builder 图形上选择 **Transform**。
     2. 输入你想导入的 UDF 的名称。![在 Pipeline Builder 中搜索未导入的 UDF。](https://www.palantir.com/docs/resources/foundry/functions/python-functions-builder-search-udfs.png?width=500px)
     3. 选择 **Search unimported UDFs**（搜索未导入的 UDF）。
-  4. 将鼠标悬停在所需的 UDF 上并选择 **Import**（导入）。![在 Pipeline Builder 中导入 UDF。](https://www.palantir.com/docs/resources/foundry/functions/python-functions-builder-import-udfs.png?width=500px)
+    4. 将鼠标悬停在所需的 UDF 上并选择 **Import**（导入）。![在 Pipeline Builder 中导入 UDF。](https://www.palantir.com/docs/resources/foundry/functions/python-functions-builder-import-udfs.png?width=500px)
 3. 填写转换定义，指定输入列和参数，然后选择 **Apply**（应用）。
 
 ![Pipeline Builder 中已配置的 Python 函数转换。](https://www.palantir.com/docs/resources/foundry/functions/python-functions-builder-transform.png?width=700px)
@@ -99,7 +99,7 @@ def compute_stats(a: Double, b: Double) -> Stats:
 
 > **⚠️ 注意**
 >
-> Pipeline Builder UDF 不支持通过 `FoundryClient()` 或 Ontology SDK（OSDK）直接访问本体。在 UDF 中实例化 `FoundryClient()` 并访问本体会返回 `EnvironmentNotConfigured` 错误。此限制有助于防止数据在跨构建时被去除安全标记或泄露。
+> Pipeline Builder UDF 不支持通过 `FoundryClient()` 或 Ontology SDK（OSDK）直接访问本体。在 UDF 中实例化 `FoundryClient()` 并访问本体会返回 `EnvironmentNotConfigured` 错误。此限制有助于防止数据在不同构建之间被去除安全标记或泄露。
 
 要从 Pipeline Builder UDF 访问本体数据，请考虑以下方法：
 

@@ -18,7 +18,7 @@
 | Webhook 支持 | 否 | 是 | 否 | 否 | [从函数中调用 Webhook](https://www.palantir.com/docs/foundry/functions/webhooks/)的能力。 |
 | 外部 API 调用支持 | 否 | 是 | 是 | 是 | [在函数内部](https://www.palantir.com/docs/foundry/functions/api-calls/)查询外部服务。 |
 | 无服务器执行支持 | 是 | 是 | 是 | 是 | 无服务器函数会在被调用时按需启动。更多信息请参阅下文的[无服务器函数](#无服务器函数)。 |
-| 已部署执行支持 | 否 | 否 | 是 | 是 | 已部署函数会为其分配专用资源，随时准备处理请求。 |
+| 已部署执行支持 | 否 | 否 | 是 | 是 | 已部署函数会被分配专用资源，随时准备处理请求。 |
 | 暂存写入支持 [Beta] | 否 | 否 | 是 | 否 | 在编辑函数中使用[暂存写入](https://www.palantir.com/docs/foundry/functions/typescript-v2-staged-writes/)以获得写后读保证和原子执行的能力。 |
 | 从 API 网关调用函数 | 是 | 是 | 是 | 是 | 从 API 网关访问[查询函数](https://www.palantir.com/docs/foundry/functions/query-functions/)的能力。 |
 | Marketplace 支持 | 是 | 是 | 是 | 是 | 在 [Marketplace](https://www.palantir.com/docs/foundry/marketplace/overview/) 中打包和交付函数的能力。 |

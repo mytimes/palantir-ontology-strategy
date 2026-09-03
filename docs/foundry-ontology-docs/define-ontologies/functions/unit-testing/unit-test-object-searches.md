@@ -59,7 +59,7 @@ whenObjectSet(Objects.search().ObjType([objB, objB]).all()).thenReturn([objA, ob
 
 #### 使用桩测试链接遍历
 
-你可以像对任何其他对象集搜索一样对 `searchAround` 遍历进行打桩，包括当你从单个对象出发并通过搜索构造函数对其进行转换时也是如此。遍历方法名由[链接类型字段名](https://www.palantir.com/docs/foundry/functions/api-objects-links/#link-types)生成，并且你必须为传递给搜索构造函数的每个对象提供一个 `rid` 属性。
+你可以像对任何其他对象集搜索一样对 `searchAround` 遍历进行打桩，包括从单个对象出发、通过搜索构造函数对其进行转换的情况。遍历方法名由[链接类型字段名](https://www.palantir.com/docs/foundry/functions/api-objects-links/#link-types)生成，并且你必须为传递给搜索构造函数的每个对象提供一个 `rid` 属性。
 
 ```typescript
 import { whenObjectSet } from "@foundry/functions-testing-lib";

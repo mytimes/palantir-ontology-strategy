@@ -2,7 +2,7 @@
 
 > 本文为 [Palantir 官方文档](https://www.palantir.com/docs/foundry/ontologies/review-ontology-proposals/)的非官方中文翻译，仅供学习参考。原文 © 2026 Palantir Technologies Inc. 保留所有权利。
 
-本体提案类似于版本控制系统中的拉取请求。提案是一种机制，用于在单独分支中所做的更改集成到 `main` 之前对其进行评审和批准。
+本体提案类似于版本控制系统中的拉取请求。提案作为一种机制，用于对在单独分支中所做的更改进行评审和批准，然后再将其集成到 `main`。
 
 对于全局分支，本体提案会在创建[全局分支化提案](https://www.palantir.com/docs/foundry/global-branching/core-concepts/#create-and-prepare-a-proposal)时自动创建，并包含元数据，例如评审、名称以及要合并到 `main` 的更改的描述。对于旧版本体分支，本体提案在分支创建时创建。
 
@@ -26,7 +26,7 @@
 
 ### 提案概览页面
 
-在全局分支上工作时，要访问单个提案，请从分支任务栏中选择任意本体资源，然后选择 **View ontology proposal**（查看本体提案）。如果你在 `Main` 上，请导航到 **Proposals**（提案）选项卡并选择你希望查看的提案。如果你在本体分支上，请从导航顶部栏选择 **Open proposal details**（打开提案详情）以直接访问提案。
+在全局分支上工作时，要访问单个提案，请从分支任务栏中选择任意本体资源，然后选择 **View ontology proposal**（查看本体提案）。如果你在 `Main` 上，请导航到 **Proposals**（提案）选项卡并选择你希望查看的提案。如果你在本体分支上，请从顶部导航栏选择 **Open proposal details**（打开提案详情）以直接访问提案。
 
 在提案中，你将看到 **Proposal overview**（提案概览）、**Preview status**（预览状态）、**Review changes**（评审更改）和 **Changelog**（变更日志）选项卡，以获取更多信息。
 

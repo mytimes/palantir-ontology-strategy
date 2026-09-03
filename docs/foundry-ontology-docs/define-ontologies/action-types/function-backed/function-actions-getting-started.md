@@ -8,7 +8,7 @@
 
 在本教程中，我们将使用与[动作入门教程](https://www.palantir.com/docs/foundry/action-types/getting-started/)相同的 `Demo Ticket` 对象类型和示例对象。
 
-首先编写一个本体编辑函数，为你的动作执行所需的编辑。这需要：
+首先编写一个本体编辑函数，该函数会执行你的动作所需的编辑。这需要：
 
 - 使用“对象函数（functions on objects）”TypeScript 模板建立代码仓库，
 - 将相关对象类型导入你的代码仓库，以及
@@ -54,7 +54,7 @@ public addPriorityToTitle(ticket: DemoTicket): void {
 
 ## 更改函数版本
 
-默认情况下，如果函数逻辑发生更改，动作不会自动更新以匹配。你必须回到动作的**规则**部分，升级动作所引用的函数版本。例如，如果我们发布了函数的 0.1.2 版本，就需要在此处更新：
+默认情况下，如果函数逻辑发生更改，动作不会自动更新以与之匹配。你必须回到动作的**规则**部分，升级动作所引用的函数版本。例如，如果我们发布了函数的 0.1.2 版本，就需要在此处更新：
 
 ![如何更新函数版本](https://www.palantir.com/docs/resources/foundry/action-types/function_backed_actions_update_function_logic.png)
 

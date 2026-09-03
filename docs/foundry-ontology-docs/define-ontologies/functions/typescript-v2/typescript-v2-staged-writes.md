@@ -35,7 +35,7 @@
 
 ### `WriteableClient`
 
-暂存写入函数使用 `WriteableClient` 而不是标准的 `Client`。`WriteableClient` 提供了用于创建、更新和删除对象的直接方法，无需构建编辑批处理。
+暂存写入函数使用 `WriteableClient` 而不是标准的 `Client`。`WriteableClient` 提供了用于创建、更新和删除对象的直接方法，无需构建编辑批次。
 
 ## 定义暂存写入函数
 
@@ -231,7 +231,7 @@ export default assignTicketAndCheckWorkload;
 - AIP Logic 函数
 - 本体查询
 
-如果顶层函数成功完成，则跨嵌套调用暂存的每个编辑都会一起提交。如果任何调用抛出异常，整个批处理都会回滚。
+如果顶层函数成功完成，则跨嵌套调用暂存的每个编辑都会一起提交。如果任何调用抛出异常，整个批次都会回滚。
 
 在下面的示例中，`assignTicket` 是从同一仓库发布的独立暂存写入函数。`bulkAssignTickets` 通过 OSDK 生成的 `$Queries` 导入调用它；每次调用都会将其编辑添加到相同的暂存编辑中。
 

@@ -2,7 +2,7 @@
 
 > 本文为 [Palantir 官方文档](https://www.palantir.com/docs/foundry/object-link-types/create-object-type/)的非官方中文翻译，仅供学习参考。原文 © 2026 Palantir Technologies Inc. 保留所有权利。
 
-创建和配置新对象类型的主要方式是使用[**分步骤引导助手**](#使用助手创建新对象类型)。引导助手是推荐的方法；但如果你在完成对象创建流程之前退出了助手，也可以[**手动**](#手动创建新对象类型)完成该流程，即手动指定新对象类型的元数据、支撑数据源、属性映射以及键（主键和标题键）。
+创建和配置新对象类型的主要方式是使用[**分步骤引导助手**](#使用助手创建新对象类型)。引导助手是推荐的方法；但如果你在完成对象创建流程之前退出了助手，也可以[**手动**](#手动创建新对象类型)完成该流程，即指定新对象类型的元数据、支撑数据源、属性映射以及键（主键和标题键）。
 
 创建新对象类型后，你可以[更改 API 名称](#配置-api-名称)，使其不同于分配的默认值。
 
@@ -61,7 +61,7 @@
 
 在对话框的第三个步骤中，你可以自定义对象类型将拥有哪些属性。如果你选择了现有的 Foundry 数据源，所有列都会被自动映射，但可以在此步骤中丢弃。
 
-每个对象类型至少需要一个属性。这是因为对象类型需要主键来唯一标识。向导允许你添加任何其他所需属性。
+每个对象类型至少需要一个属性。这是因为对象类型需要主键来唯一标识自身。向导允许你添加任何其他所需属性。
 
 请注意，需要高级配置的属性类型（如媒体）无法作为引导向导的一部分生成，必须在退出向导后添加。
 
@@ -72,9 +72,9 @@
 作为 **Properties**（属性）步骤的一部分，你需要选择主键和标题键：
 
 - **Title key（标题键）：** 充当此类型对象显示名的属性。
-  - 例如，选择 `full name` 属性作为 `Employee` 对象类型的标题键，将使用该属性的值（如“Melissa Chang”、“Akriti Patel”或“Diego Rodriguez”）作为各自对应概念上的 `Employee` 对象的显示名。
+  - 例如，选择 `full name` 属性作为 `Employee` 对象类型的标题键，将使用该属性的值（如“Melissa Chang”、“Akriti Patel”或“Diego Rodriguez”）作为各自对应的虚构 `Employee` 对象的显示名。
 - **Primary key（主键）：** 充当对象类型每个实例唯一标识符的属性。支撑数据源中的每一行在此属性上必须具有不同的值。
-  - 例如，`employee ID` 属性的值将用于在组织内将“Melissa Chang”标识为唯一员工。
+  - 例如，`employee ID` 属性的值会用于在组织内将“Melissa Chang”标识为唯一员工。
 
 受支持的属性类型列表可在[对象类型属性文档](https://www.palantir.com/docs/foundry/object-link-types/properties-overview/#supported-property-types)中找到。
 
@@ -216,11 +216,11 @@
 ![配置主键和标题键](https://www.palantir.com/docs/resources/foundry/object-link-types/create-object-type-configure-keys-manual.png?width=500)
 
 - **Primary key（主键）：** 充当对象类型每个实例唯一标识符的属性。支撑数据源中的每一行在此属性上必须具有不同的值。
-  - 例如，`employee ID` 属性的值将用于在组织内将“Melissa Chang”标识为唯一的（概念上的）员工。
+  - 例如，`employee ID` 属性的值会用于在组织内将“Melissa Chang”标识为唯一的（虚构的）员工。
   - 要配置主键，请在属性编辑器的属性窗格中选择要分配为主键的属性，并勾选 **Primary key** 选项。
   - 编辑会永久绑定到其对应的主键值上。每当你更改对象类型的主键时，系统都会提示你删除所有现有编辑。
 - **Title key（标题键）：** 充当此类型对象显示名的属性。
-  - 例如，选择 `full name` 属性作为 `Employee` 对象类型的标题键，将使用该属性的值（如“Melissa Chang”、“Akriti Patel”或“Diego Rodriguez”）作为各自对应概念上的 `Employee` 对象的显示名。
+  - 例如，选择 `full name` 属性作为 `Employee` 对象类型的标题键，将使用该属性的值（如“Melissa Chang”、“Akriti Patel”或“Diego Rodriguez”）作为各自对应的虚构 `Employee` 对象的显示名。
   - 要配置标题键，请在属性编辑器的属性窗格中选择要分配为标题键的属性，并勾选 **Title key** 选项。
 
 请注意，到目前为止，你的更改已被暂存，但**尚未保存**。要将新对象类型保存到本体，请按照[如何将更改保存到本体](https://www.palantir.com/docs/foundry/ontology-manager/save-changes/)中的说明操作。

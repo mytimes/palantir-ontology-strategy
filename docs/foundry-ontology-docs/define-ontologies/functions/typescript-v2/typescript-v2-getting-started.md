@@ -12,7 +12,7 @@ TypeScript v2 允许用户利用相比 TypeScript v1 的若干关键[改进](htt
 
 仓库创建完成后，导航到 `typescript-functions/src/functions/helloWorld.ts` 文件。
 
-在将本体类型导入函数之前，请通过**资源导入**侧边栏添加你的对象类型和链接类型，然后生成并安装 Ontology SDK。这些步骤请参阅[生成 Ontology SDK](https://www.palantir.com/docs/foundry/functions/typescript-v2-migration/#generate-the-ontology-sdk)。
+在将本体类型导入函数之前，请通过**资源导入（Resource imports）**侧边栏添加你的对象类型和链接类型，然后生成并安装 Ontology SDK。请参阅[生成 Ontology SDK](https://www.palantir.com/docs/foundry/functions/typescript-v2-migration/#generate-the-ontology-sdk)了解这些步骤。
 
 ## 编写函数
 

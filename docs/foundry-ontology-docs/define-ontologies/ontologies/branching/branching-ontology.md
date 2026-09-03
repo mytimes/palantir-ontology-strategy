@@ -115,7 +115,7 @@
 
 ![完成变基并保存选项。](https://www.palantir.com/docs/resources/foundry/ontologies/finish-rebase-and-save.png)
 
-你可以继续在分支上工作，并定期变基，以使你的分支与最新版本的 `main` 分支保持同步。
+你可以继续在分支上工作，并定期变基，以使你的分支与 `main` 分支的最新版本保持同步。
 
 ![分支已是最新。](https://www.palantir.com/docs/resources/foundry/ontologies/branch-is-up-to-date.png)
 

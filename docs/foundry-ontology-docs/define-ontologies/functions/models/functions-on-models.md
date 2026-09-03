@@ -23,17 +23,17 @@ TypeScript v1、TypeScript v2 和 Python 函数均完全支持模型函数。
 >
 > 对于 TypeScript v1 代码仓库，也可以通过选择 **Models（模型）** 来导入模型函数，这在功能上等同于在 **Query Functions（查询函数）** 下导入。
 >
-> 在建模目标中使用 **API Name** 卡片（而非推荐的[模型发布对话框](https://www.palantir.com/docs/foundry/manage-models/set-up-live/#publish-function)）的旧版模型函数，仍然可以在 **Modeling Objectives（建模目标）** 部分下导入，但正在停止服务。
+> 在建模目标中使用 **API Name** 卡片（而非推荐的[模型发布对话框](https://www.palantir.com/docs/foundry/manage-models/set-up-live/#publish-function)）的旧版模型函数，仍然可以在 **Modeling Objectives（建模目标）** 部分下导入，但即将停用。
 
 ## 绑定本体或空间（space）的函数
 
 从 2026 年 2 月起，所有新的模型函数都将与本体绑定。这是在 [TypeScript v2 和 Python 函数](https://www.palantir.com/docs/foundry/functions/language-models-python-tsv2/)中使用的前提条件，因为它们只允许导入本体资源。在此日期之前，模型函数与模型的[空间（space）](https://www.palantir.com/docs/foundry/security/orgs-and-spaces/)绑定。TypeScript v1 允许导入这两种类型的模型函数，但导入和使用的语义略有不同，[详见下文](#如果函数注册到本体)。
 
-要检查函数是否绑定到本体，请导航到你的模型：未绑定到本体的模型函数会指示有可用的迁移。[详细了解如何将函数迁移为绑定本体](#将模型函数迁移为绑定本体的函数)。
+要检查函数是否绑定到本体，请导航到你的模型：未绑定到本体的模型函数会提示可进行迁移。[详细了解如何将函数迁移为绑定本体](#将模型函数迁移为绑定本体的函数)。
 
 > **ℹ️ 提示**
 >
-> Marketplace 会将导入代码仓库的模型函数识别为安装输入，从而实现结构化的依赖跟踪。对于未导入模型函数而直接通过 Platform SDK 查询的模型函数，Marketplace 不会跟踪。
+> Marketplace 会将导入代码仓库的模型函数识别为安装输入，从而实现结构化的依赖跟踪。对于未经导入、直接通过 Platform SDK 查询的模型函数，Marketplace 不会跟踪。
 
 ## 从 Python 或 TypeScript v2 函数中调用模型函数
 
@@ -196,7 +196,7 @@ export class MyFunctions {
 
 ### 将模型函数迁移为绑定本体的函数
 
-当你从用户界面将绑定空间的模型函数迁移为绑定本体的函数时，使用该模型的 TypeScript v1 函数的已发布版本将继续有效。但是，导入语法将不再被识别，这意味着消费该模型函数的代码仓库将无法再进行预览，也无法为新版本打标签。
+当你从用户界面将绑定空间的模型函数迁移为绑定本体的函数时，使用该模型的 TypeScript v1 函数的已发布版本将继续正常工作。但是，导入语法将不再被识别，这意味着消费该模型函数的代码仓库将无法再进行预览，也无法为新版本打标签。
 
 要在迁移后更新你的 TypeScript v1 函数：
 

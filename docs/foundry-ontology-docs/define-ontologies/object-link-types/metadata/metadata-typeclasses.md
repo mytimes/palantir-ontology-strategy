@@ -27,12 +27,12 @@
 | 已弃用 | 属性 | hubble | endorsement_status: endorsed | 当添加到对象类型的主键属性时，在 Object Explorer 和 Object Views 中将对象标记为 `endorsed`（已认可）。 |
 | 已弃用 | 属性 | hubble | endorsement_status: not_endorsed | 当添加到对象类型的主键属性时，在 Object Explorer 和 Object Views 中将对象标记为 `work in progress`（进行中）。 |
 | 已弃用 | 属性 | hubble | thumbnail | 将作为属性值存储的 URL 用作搜索结果卡片中的缩略图。这仅在旧版本的 Object Explorer 中相关。 |
-| 已弃用 | 属性 | hubble | array | 此类型类以前用于确保属性格式化为数组，但现在数组已是 Ontology Manager 中受妥善支持的属性基础类型。 |
+| 已弃用 | 属性 | hubble | array | 此类型类以前用于确保属性格式化为数组，但现在数组已是 Ontology Manager 中得到良好支持的属性基础类型。 |
 | 已弃用 | 属性 | hubble | default_sort_descending | 在 Object Explorer 中自动按列值降序排序。这仅在旧版本的 Object Explorer 中相关。 |
 | 已弃用 | 属性 | hubble | quick_filter | 在 Object Explorer 列表视图中，这些属性曾作为默认筛选器可用。这仅在旧版本的 Object Explorer 中相关。 |
 |  | 链接类型 | hierarchy | parent | 表明链接类型中的链接方向代表层级结构中的父级。随后 Object Views 会在该层级结构的 Object View 顶部显示面包屑（例如，'Europe -> France -> Paris -> Rue Cler'）。 |
 |  | 属性 | choropleth_map_config_id | <map_config_id> | 对于任何包含地理区域值（即国家/地区代码）、可绘制在地图上的属性类型，都可以创建分级统计图（choropleth）。所需类型类的 `kind` 为 `choropleth_map_config_id`，`name` 取决于该属性包含的区域代码类型。例如：- 对于国家，使用 `countries` - 美国各州 → `us_states` - 美国各县 → `us_counties` - 美国邮政编码 → `us_zip_codes` 有关更多区域边界选项，或有关添加此类型类的更多帮助，请联系你的 Palantir 代表。配置选项包括更改聚合类型以及所用的色阶。要使用此类型类，必须对该属性应用 `selectable` 或 `sortable` 渲染提示。 |
-| 已弃用 | 属性 | oe_home_page_object_type_group | <your_object_type_group_name> | 将此类型类添加到对象类型的主键属性，可将该对象类型添加到某个组。请确保拼写正确，以避免组的重复。这些配置的对象类型组显示在 Object Explorer 的主页上。如果你配置了组，任何未添加到组的非隐藏对象类型都将放置在页面底部的“Other”（其他）组下。此功能已被对象类型组能力取代。 |
+| 已弃用 | 属性 | oe_home_page_object_type_group | <your_object_type_group_name> | 将此类型类添加到对象类型的主键属性，可将该对象类型添加到某个组。请确保拼写正确，以免产生重复的组。这些配置的对象类型组显示在 Object Explorer 的主页上。如果你配置了组，任何未添加到组的非隐藏对象类型都将放置在页面底部的“Other”（其他）组下。此功能已被对象类型组能力取代。 |
 |  | 动作类型 | hubble-oe | hide-action | 在 Object Explorer 和 Object Views 中隐藏该动作类型；否则它们会在 `Actions` 按钮下拉菜单中被自动发现。 |
 |  | 动作类型 | hubble-oe-object-set-rid | <object_type_RID> | 允许创建动态对象集的实验性功能。 |
 |  | 动作类型 | hubble-oe-security-rid | <compass_RID> | 允许创建动态对象集的实验性功能。 |
@@ -54,7 +54,7 @@
 |  | 链接类型 | vertex | component | 对于 Vertex 图表，表明与基础对象链接、将在图表中使用的对象。 |
 |  | 属性 | vertex | component_subtype | 对于 Vertex，允许比对象类型更细粒度的分组。将类型类放置在对象的主键上。 |
 |  | 属性 | vertex | event_intent.<intent_> | 在 Event（事件）的主键属性上设置此项，以在 Vertex 和 Vortex 中使用，其中 `intent` 表示事件/警报的颜色/严重程度（danger、warning、primary 或 success）。例如：`event_intent.danger` |
-|  | 属性 | vertex | event_value | 表明表示事件数值的属性。 |
+|  | 属性 | vertex | event_value | 指明表示事件数值的属性。 |
 |  | 属性 | vertex | event_value_unit.<unit_> | 与 `event_value` 一起设置，其中 `unit` 是事件数值的度量单位。例如：`event_value_unit.Kilograms` |
 |  | 属性 | vertex | event_property | 在 Vertex 和 Vortex 事件卡片中显示此属性。 |
 |  | 属性 | vertex | min | 对于时间序列对象：当序列值低于此最小值时，Vertex 将发出警报。 |

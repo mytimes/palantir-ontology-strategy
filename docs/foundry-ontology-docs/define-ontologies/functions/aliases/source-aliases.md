@@ -32,7 +32,7 @@
 
 ## 在代码中使用源别名
 
-要在函数中使用源别名，请在声明和获取数据源的所有位置按键引用别名。将别名键传递给 `sources` 配置以及 `getSource`（TypeScript v2）或 `get_source`（Python）：
+要在函数中使用源别名，请在声明和获取数据源的所有位置通过其键引用别名。将别名键传递给 `sources` 配置以及 `getSource`（TypeScript v2）或 `get_source`（Python）：
 
 **TypeScript v2**
 

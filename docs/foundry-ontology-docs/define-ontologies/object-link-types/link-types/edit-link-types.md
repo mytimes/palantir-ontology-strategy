@@ -91,7 +91,7 @@
   - 请注意，你无法更改状态为 `active` 的链接类型的 API 名称。
     - 阅读更多关于[状态](https://www.palantir.com/docs/foundry/object-link-types/metadata-statuses/)的信息。
     - 阅读更多关于[有效 API 名称](https://www.palantir.com/docs/foundry/object-link-types/create-object-type/#configure-api-names)的信息。
-4. **Visibility（可见性）：**从链接可见性列表中查看可见性。`prominent`（显著）链接类型会提示应用优先向用户展示此链接类型。`hidden`（隐藏）链接类型不会出现在用户应用中。
+4. **Visibility（可见性）：**从链接可见性列表中选择可见性。`prominent`（显著）链接类型会提示应用优先向用户展示此链接类型。`hidden`（隐藏）链接类型不会出现在用户应用中。
 5. **Type classes（类型类）：**应用类型类作为附加元数据，可供应用解读。
   - 请参阅[可用类型类列表](https://www.palantir.com/docs/foundry/object-link-types/metadata-typeclasses/)以了解更多信息。
 

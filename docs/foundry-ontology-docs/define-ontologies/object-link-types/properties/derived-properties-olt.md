@@ -48,7 +48,7 @@
 
 ### 5. 配置聚合（如需要）
 
-如果你的链接链中有任何链接具有“多”基数（一个对象链接到多个对象），你必须选择一个**聚合（Aggregation）**来合并这些值：
+如果你的链接链中有任何链接具有“多”基数（一个对象链接到多个对象），你必须选择一个**Aggregation**（聚合）来合并这些值：
 
 可用的聚合：
 
@@ -64,7 +64,7 @@
 
 ### 6. 选择要派生的属性
 
-选择链接类型（以及所需的聚合）后，选择你要从链接对象类型派生哪个属性：
+选择链接类型（以及所需的聚合）后，选择你要从链接对象类型派生的属性：
 
 - 下拉菜单显示链接链中最终对象类型的所有可用属性。
 - 对于 **Count** 聚合，你无需选择属性，因为对象会被自动计数。
@@ -73,7 +73,7 @@
 
 ### 7. 配置收集限制（针对收集类聚合）
 
-如果你选择 **Collect list** 或 **Collect set** 作为聚合，可以选择设置收集项数量的限制。默认限制为 10 项。
+如果你选择 **Collect list** 或 **Collect set** 作为聚合，可以选择对收集项的数量设置限制。默认限制为 10 项。
 
 ## 多跳派生属性
 
@@ -95,9 +95,9 @@
 
 ### 已知限制
 
-- **OSv1 支持：** 包含派生属性的查询不得包含任何使用 [OSv1](https://www.palantir.com/docs/foundry/object-backend/osv1-osv2-migration/) 编入索引的对象类型。
+- **OSv1 支持：** 包含派生属性的查询不能包含任何使用 [OSv1](https://www.palantir.com/docs/foundry/object-backend/osv1-osv2-migration/) 编入索引的对象类型。
 - **文本搜索：** 派生属性不能用于文本搜索或关键词筛选。
-- **OSDK 中的结构体：** 在当前版本的 TypeScript OSDK 中，包含派生属性的查询不得包含任何[结构体](https://www.palantir.com/docs/foundry/object-link-types/structs-overview/)属性类型。你可以使用 `$select` 操作排除结构体属性。
+- **OSDK 中的结构体：** 在当前版本的 TypeScript OSDK 中，包含派生属性的查询不能包含任何[结构体](https://www.palantir.com/docs/foundry/object-link-types/structs-overview/)属性类型。你可以使用 `$select` 操作排除结构体属性。
 - **内联动作：** 配置了内联动作的属性不能转换为派生属性。
 - **值类型：** 具有值类型的属性不能转换为派生属性。
 - **必填属性：** 派生属性不能标记为必填（不可为空）。

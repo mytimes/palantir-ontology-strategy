@@ -6,7 +6,7 @@
 
 ### 属性
 
-每个对象类型的[属性](https://www.palantir.com/docs/foundry/object-link-types/properties-overview/)都会转换为该对象类型所生成 TypeScript 接口上的字段。生成的字段名使用本体中指定的 API 名称（API Name）。
+每个对象类型的[属性](https://www.palantir.com/docs/foundry/object-link-types/properties-overview/)都会转换为为该对象类型生成的 TypeScript 接口上的字段。生成的字段名使用本体中指定的 API 名称（API Name）。
 
 你可以使用简单的点表示法访问每个属性的字段：
 

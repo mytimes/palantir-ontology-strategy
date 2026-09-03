@@ -26,7 +26,7 @@
 - **输出无效错误（Invalid output error）：** 函数产生的输出无效，或不符合预期的格式或规则。
 - **不允许加载数据错误（Data loading not allowed error）：** 函数执行尝试加载数据（包括对象、对象集、用户或用户组），但不允许这样做。
 - **编辑了未声明对象类型错误（Undeclared object types edited error）：** 函数执行尝试更新、创建或删除某个对象，但该对象的对象类型未在函数规范中声明。
-- **结构化错误（Structured error）：** 函数执行遇到了其规范中定义的结构化错误。
+- **结构化错误（Structured error）：** 函数执行遇到了函数规范中定义的结构化错误。
 - **部署错误（Deployment error）：** 由于函数的部署出现错误，函数执行失败。
 - **一致性快照错误（Consistent snapshot error）：** 由于一致性快照错误，函数未能执行。
 

@@ -16,7 +16,7 @@
 
 ### 静态默认值
 
-设想一个示例动作类型，它将所选 `Aircraft`（飞机）对象的 `Type` 属性修改为 `A320`。要配置，请点击进入 `Type` 参数并添加静态默认值。
+设想一个示例动作类型，它将所选 `Aircraft`（飞机）对象的 `Type` 属性修改为 `A320`。要进行配置，请点击进入 `Type` 参数并添加静态默认值。
 
 ![配置静态默认值](https://www.palantir.com/docs/resources/foundry/action-types/default_value_static_configuration.png)
 
@@ -30,7 +30,7 @@
 
 ![配置属性默认值](https://www.palantir.com/docs/resources/foundry/action-types/default_value_object_configuration.png)
 
-在 Object Explorer 中，`Change Airplane Details` 动作将使用当前值预填。在这种情况下，用户可以选择只修改一个属性而保持其余不变。无论动作在哪里提交，都会呈现相同的默认逻辑。请注意，一旦动作用户更新了此默认值，`Lifetime Hours` 值就会显示为已编辑。
+在 Object Explorer 中，`Change Airplane Details` 动作将使用当前值预填。在这种情况下，用户可以选择只修改一个属性而保持其余不变。无论动作在哪里提交，都会应用相同的默认逻辑。请注意，一旦动作用户更新了此默认值，`Lifetime Hours` 值就会显示为已编辑。
 
 ![对象默认值](https://www.palantir.com/docs/resources/foundry/action-types/default_value_object_example.png)
 

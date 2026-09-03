@@ -2,7 +2,7 @@
 
 > 本文为 [Palantir 官方文档](https://www.palantir.com/docs/foundry/functions/python-ontology-edits/)的非官方中文翻译，仅供学习参考。原文 © 2026 Palantir Technologies Inc. 保留所有权利。
 
-除了编写从本体读取数据的函数外，你还可以编写用于创建对象、编辑对象属性以及对象之间链接的函数。本页记录了函数中可供你使用的对象编辑 API。有关编辑函数工作原理的更多细节，请参阅[概览页](https://www.palantir.com/docs/foundry/functions/edits-overview/)。
+除了编写从本体读取数据的函数外，你还可以编写用于创建对象、编辑对象属性以及对象之间的链接的函数。本页记录了函数中可供你使用的对象编辑 API。有关编辑函数工作原理的更多细节，请参阅[概览页](https://www.palantir.com/docs/foundry/functions/edits-overview/)。
 
 要使函数中创建的编辑真正被应用，本体编辑函数*必须配置为[函数支撑的动作（function-backed Action）](https://www.palantir.com/docs/foundry/action-types/function-actions-overview/)*。以这种方式配置动作后，你可以提供额外的元数据、配置权限，并在各种运营界面中访问该动作。如[文档](https://www.palantir.com/docs/foundry/functions/edits-overview/#when-edits-are-applied)中所述，在动作之外运行编辑函数不会实际修改任何对象数据。
 
@@ -43,7 +43,7 @@ editable_object = ontology_edits.objects.MyObjectType.edit(my_object)
 editable_object = ontology_edits.objects.MyObjectType.edit(object_primary_key)
 ```
 
-获得可编辑对象后，你可以通过重新赋值对象的属性值来编辑属性。例如：
+获得可编辑对象后，你可以通过为对象的属性重新赋值来编辑属性值。例如：
 
 ```python
 editable_employee.last_name = new_name

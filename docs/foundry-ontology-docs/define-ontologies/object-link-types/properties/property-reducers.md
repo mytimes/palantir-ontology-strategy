@@ -150,7 +150,7 @@
 
 ## 将属性归约器与结构体主字段组合使用
 
-将属性归约器与[结构体主字段](https://www.palantir.com/docs/foundry/object-link-types/struct-main-fields/)组合使用时，你可以启用属性显示并扩展它们可实现的接口的数量和形态。
+将属性归约器与[结构体主字段](https://www.palantir.com/docs/foundry/object-link-types/struct-main-fields/)组合使用时，你可以启用属性显示，并扩展这些属性可实现的接口的数量和形态。
 
 考虑下面的 `Event` 对象类型，它包含一个 `Locations` 属性，该属性是结构体数组：
 
@@ -170,7 +170,7 @@
 | 仅归约器 | `Struct Array`、`Struct` |
 | **两者均配置** | `Struct Array`、`String Array`、`Struct`、`String` |
 
-例如，同时配置结构体主字段和属性归约器后，你可以使用 `locations` 属性来满足接口中的*单个*字符串属性，例如下图中假想的 `Event` 接口的 `Event street name`。
+例如，同时配置结构体主字段和属性归约器后，你可以使用 `locations` 属性来满足接口中的*单个*字符串属性，例如下图中虚构的 `Event` 接口的 `Event street name`。
 
 ![通过归约器和主字段实现单个字符串](https://www.palantir.com/docs/resources/foundry/object-link-types/property-reducers-combination-single-string.png?width=700)
 
@@ -202,7 +202,7 @@
 
 ### 归约器在所有应用中都有效吗？
 
-各应用正在逐步推出对归约属性的支持。如果你在属性上配置了归约器并使用尚不支持归约器的应用，它不应破坏任何现有功能，该属性只会继续显示为数组。只有支持归约器的应用才能显示归约值。
+各应用正在逐步推出对归约属性的支持。如果你在属性上配置了归约器并使用尚不支持归约器的应用，它不应破坏任何现有功能；该属性只会继续显示为数组。只有支持归约器的应用才能显示归约值。
 
 ---
 

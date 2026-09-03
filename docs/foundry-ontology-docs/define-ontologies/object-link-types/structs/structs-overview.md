@@ -4,7 +4,7 @@
 
 **结构体（struct）** 是本体属性的[基础类型](https://www.palantir.com/docs/foundry/object-link-types/base-types/)，它允许单个属性容纳多个字段而不是单个值。你在定义属性时声明这些字段，每个字段都有自己的名称和类型。你可以用这种方式为许多常见的对象属性建模。例如，`Full Name`（全名）属性可以容纳 `firstName` 和 `lastName` 字段，`Address`（地址）属性可以容纳 `street`、`city`、`postalCode` 和 `country`。
 
-结构体属性由类型本身为结构体的单个数据源列支撑。在 Ontology Manager 中，你在[创建结构体属性](https://www.palantir.com/docs/foundry/object-link-types/create-struct-type/)时将该列选为属性的**支撑列（Backing column）**。字段值最初可以来自不同的数据源，只要你在本体中定义该属性之前将它们合并到单个结构体类型列中即可。
+结构体属性由单个数据源列支撑，该列的类型本身即为结构体。在 Ontology Manager 中，你在[创建结构体属性](https://www.palantir.com/docs/foundry/object-link-types/create-struct-type/)时将该列选为属性的**支撑列（Backing column）**。字段值最初可以来自不同的数据源，只要你在本体中定义该属性之前将它们合并到单个结构体类型列中即可。
 
 ## 结构体配置
 

@@ -8,7 +8,7 @@
 
 > **ℹ️ 提示**
 >
-> Webhook 可以作为一等函数发布。这意味着你可以从 Workshop、Ontology SDK、Actions 和其他函数中调用它们。若要改为将 Webhook 作为函数发布，请参阅 [Webhook 函数](https://www.palantir.com/docs/foundry/data-connection/webhooks-reference/#webhook-functions)。
+> Webhook 可以作为一等公民级的函数发布。这意味着你可以从 Workshop、Ontology SDK、Actions 和其他函数中调用它们。若要改为将 Webhook 作为函数发布，请参阅 [Webhook 函数](https://www.palantir.com/docs/foundry/data-connection/webhooks-reference/#webhook-functions)。
 
 本指南将引导你设置一个能够使用 [Webhook](https://www.palantir.com/docs/foundry/data-connection/webhooks-overview/) 向外部系统发起请求的函数。
 
@@ -149,7 +149,7 @@ export class MyFunctions {
 | `ServerError` | Webhook 服务或连接器内部发生问题。 |
 | `UnknownError` | 发生了无法直接归因于任何 Foundry 服务的错误。 |
 
-此错误类型列表可能会发生变化；用户应构建其代码，以便在函数执行器返回带有新名称的错误时包含一个默认分支。
+此错误类型列表可能会发生变化；用户应组织其代码，以便在函数执行器返回带有新名称的错误时包含一个默认分支。
 
 ### 示例：在从单个函数发起多个 Webhook 调用时处理错误
 

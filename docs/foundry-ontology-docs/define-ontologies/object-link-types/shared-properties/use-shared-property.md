@@ -19,7 +19,7 @@
 
 ### 从对象分离共享属性
 
-要将属性与共享属性分离，请在 Ontology Manager 中对象类型上使用相同的属性面板，并选择 **Detach**（分离）。
+要将属性与共享属性分离，请在 Ontology Manager 中的对象类型上使用相同的属性面板，并选择 **Detach**（分离）。
 
 ![分离共享属性](https://www.palantir.com/docs/resources/foundry/object-link-types/detach-shared-property.png?width=500)
 

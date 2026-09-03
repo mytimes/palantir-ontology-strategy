@@ -2,7 +2,7 @@
 
 > 本文为 [Palantir 官方文档](https://www.palantir.com/docs/foundry/functions/types-reference/)的非官方中文翻译，仅供学习参考。原文 © 2026 Palantir Technologies Inc. 保留所有权利。
 
-为了发布到注册中心，TypeScript 函数必须在所有输入参数上具有显式类型标注，并指定显式返回类型。以下是当前支持的函数注册中心类型及其对应语言类型的完整列表。
+为了发布到注册中心，TypeScript 函数必须为所有输入参数提供显式类型标注，并指定显式返回类型。以下是当前支持的函数注册中心类型及其对应语言类型的完整列表。
 
 > **ℹ️ 提示**
 >
@@ -607,7 +607,7 @@ def filter_for_even_integers(nums: list[Integer]) -> list[Integer]:
 
 ### 映射（Map）
 
-映射通常用于以标量类型为键，并访问关联的值，该值可以是任何其他函数注册中心类型。
+映射通常用于以标量类型作为键来访问关联的值，该值可以是任何其他函数注册中心类型。
 
 **TypeScript v1**
 

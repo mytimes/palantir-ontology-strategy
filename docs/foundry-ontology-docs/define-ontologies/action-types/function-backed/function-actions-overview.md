@@ -2,7 +2,7 @@
 
 > 本文为 [Palantir 官方文档](https://www.palantir.com/docs/foundry/action-types/function-actions-overview/)的非官方中文翻译，仅供学习参考。原文 © 2026 Palantir Technologies Inc. 保留所有权利。
 
-在动作类型中，[规则](https://www.palantir.com/docs/foundry/action-types/rules/)定义了动作应用时对象应如何变化。许多动作类型可以使用简单规则定义，让你能够创建、修改和删除对象，或创建和删除对象之间的链接。
+在动作类型中，[规则](https://www.palantir.com/docs/foundry/action-types/rules/)定义了在应用动作时对象应如何变化。许多动作类型可以使用简单规则定义，让你能够创建、修改和删除对象，或创建和删除对象之间的链接。
 
 但在某些情况下，简单规则不足以描述你想要进行的更改。例如，你可能想要：
 

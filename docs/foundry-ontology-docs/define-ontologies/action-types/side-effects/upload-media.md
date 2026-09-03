@@ -4,14 +4,14 @@
 
 动作支持使用动作表单或表格上传媒体文件。对于 Foundry 中的大多数用例，推荐将文件上传到媒体引用属性（media reference property）。
 
-媒体引用属性（由[媒体集（media sets）](https://www.palantir.com/docs/foundry/data-integration/media-sets/)支撑）相比附件属性具有若干优势：
+媒体引用属性由[媒体集（media sets）](https://www.palantir.com/docs/foundry/data-integration/media-sets/)支撑，相比附件属性具有若干优势：
 
 - **可扩展性（Scalability）：**支持数十亿个文件，具有高效的存储和检索能力。
 - **内置转换（Built-in transformations）：**支持许多媒体转换和 LLM 功能，开箱即用、简单易用。
 - **高级预览（Advanced previews）：**为受支持的格式提供内置渲染和丰富的预览功能。
 - **格式支持（Format support）：**支持标准格式和专用格式（如 NITF、GeoTIFF 和 DICOM）上的定制工作流。
 
-用户可以通过文件选择器界面上传媒体文件，文件在动作成功提交后持久化到媒体集。
+用户可以通过文件选择器界面上传媒体文件，文件会在动作成功提交后被持久化到媒体集。
 
 > **⚠️ 注意**
 >

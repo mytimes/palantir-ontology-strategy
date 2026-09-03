@@ -8,7 +8,7 @@
 
 结构体参数是基础类型为 `STRUCT` 的参数，该类型包含嵌套参数字段，这些字段有各自独立的名称和基础类型。结构体参数只能用于为结构体属性提供值。结构体参数字段支持的基础类型有 `BOOLEAN`、`DATE`、`DOUBLE`、`GEOPOINT`、`INTEGER`、`LONG`、`STRING` 和 `TIMESTAMP`。
 
-下面是一个用于 `Create Ticket`（创建工单）动作的 `Resolution` 结构体参数。`summary`、`resolutionTime` 和 `owner` 等嵌套字段将工单如何解决的信息汇总到单个参数中。
+下面是一个用于 `Create Ticket`（创建工单）动作的 `Resolution` 结构体参数。`summary`、`resolutionTime` 和 `owner` 这三个嵌套字段将工单如何解决的信息汇总到单个参数中。
 
 ![带有嵌套字段的结构体参数。](https://www.palantir.com/docs/resources/foundry/action-types/struct-parameter-nested-fields.png)
 

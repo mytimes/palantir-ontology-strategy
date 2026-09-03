@@ -49,7 +49,7 @@
 - 函数的输入参数必须包含一个对象集参数（从 `ontology_sdk.ontology.object_sets` 导入），并可以选择包含其他输入参数。该对象集参数将使表中显示的对象能够被传入函数，从而生成所需的派生列。请注意，`list[ObjectType]` 参数在这里也可以使用，但不推荐这种性能较低的选项。
 - 函数的返回类型必须是 `dict[ObjectType, ColumnType]`，其中 `ColumnType` 是该列所需的[类型](https://www.palantir.com/docs/foundry/functions/types-reference/#types-reference)；或者使用 `dict[ObjectType, CustomType]` 从函数返回多个列。详细了解[自定义类型](https://www.palantir.com/docs/foundry/functions/types-reference/#structcustom-type)。
 
-一旦满足上述条件的函数被配置并发布，你就可以在 [Object Table](https://www.palantir.com/docs/foundry/workshop/widgets-object-table/#features-of-function-backed-properties)（对象表）组件配置中配置函数支撑属性列。
+一旦满足上述条件的函数被配置并发布，你就可以在 [Object Table](https://www.palantir.com/docs/foundry/workshop/widgets-object-table/#features-of-function-backed-properties)（对象表）组件的配置中配置函数支撑属性列。
 
 返回一列的函数示例：
 

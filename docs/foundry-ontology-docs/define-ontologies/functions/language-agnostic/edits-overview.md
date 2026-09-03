@@ -113,7 +113,7 @@ def edit_and_search() -> list[OntologyEdit]:
 
 #### 函数支撑的动作中的可选数组
 
-在代码仓库中运行 `@OntologyEditFunction` 时，被省略的可选数组会被当作 `undefined` 处理；而在通过动作执行该函数时，它们会被作为空数组传入。
+在代码仓库中运行 `@OntologyEditFunction` 时，被省略的可选数组会被当作 `undefined` 处理；而在通过动作执行该函数时，它们会作为空数组传入。
 
 ---
 
